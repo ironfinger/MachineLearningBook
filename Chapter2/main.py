@@ -36,7 +36,7 @@ print(y_predict)
 
 # Lets plot the prediction:
 plt.plot(X_new, y_predict, 'r-')
-plt.plot(X, y, 'b.')
+plt.plot(X, y, 'b.'X)
 plt.axis([0, 2, 0, 15])
 plt.show()
 

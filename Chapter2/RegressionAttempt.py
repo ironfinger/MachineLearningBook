@@ -5,12 +5,18 @@ import os
 
 data_path = os.path.join('Workshops')
 
-train = pd.read_csv(os.path.join(data_path, 'regression_train(1).csv'))
+train = pd.read_csv('student-mat.csv')
 
 train.head()
 
-train_x = train['x']
-train_y = train['y']
+# We are looking for the fare they paid based on their age and see if there a correlation.
 
 
+# %%
+
+going_out = train['goout']
+grade3 = train['freetime']
+
+plt.plot(going_out, grade3, 'b.')
+plt.show()
 # %%
