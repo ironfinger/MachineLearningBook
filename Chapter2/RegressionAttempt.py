@@ -5,7 +5,7 @@ import os
 
 data_path = os.path.join('Workshops')
 
-train = pd.read_csv('student-mat.csv')
+train = pd.read_csv('Salary_Data.csv')
 
 train.head()
 
@@ -14,9 +14,17 @@ train.head()
 
 # %%
 
-going_out = train['goout']
-grade3 = train['freetime']
+years_experience = train['YearsExperience']
+salary = train['Salary']
 
-plt.plot(going_out, grade3, 'b.')
+plt.plot(years_experience, salary, 'b.')
 plt.show()
 # %%
+# Import lingal:
+from numpy import linalg
+
+theta_best = linalg.inv(years_experience.dot(years_experience)).dot(years_experience.dot(salary))
+
+print('theta_best: ', theta_best)
+# %%
+
